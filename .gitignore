@@ -1,0 +1,6 @@
+# Ignore specific files in the data folder
+data/data_description.txt
+data/sample_submission.csv
+
+# Ensure other files in data/ are not ignored
+!data/*
