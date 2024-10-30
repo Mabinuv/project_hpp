@@ -23,15 +23,16 @@ HPP/
 │   ├── raw/                # Raw data files
 │   └── processed/          # Processed data files
 ├── notebooks/
-│   ├── EDA.ipynb
+│   ├── EDA.ipynb           #Done
 │   └── Modeling.ipynb
 ├── models/
 │   └── best_model.joblib
 ├── src/
-│   ├── __init__.py
-│   ├── data_preprocessing.py
+│   ├── func.py
+│   ├── preprocess.py           # Done
 │   ├── train_model.py
-│   └── evaluate_model.py
+│   └── model.py
+│ 
 ├── tests/
 │   └── test_models.py
 ├── README.md
@@ -47,4 +48,59 @@ Make sure to install the necessary dependencies before running the script:
 ```bash
 python preprocess.py /Project/HPP/data/train.csv  --test_size 0.3
 ```
+
+
+## Learning concepts
+
+### Models
+- Random Forest
+    * Random forest is an ensemble learning model.
+    * Is built on the concept of decision trees -> these itself are individual models that split data(features) into branches
+    * RF has multiple decision trees, trained on random subsets
+    * The results of these DT are then combined (Averaged for regression task)
+    * concepts: Bootstrap sampling
+    * Benefits:-
+      * improved accuracy - because trained on multiple random trees -> reduces overfitting
+      * manage high dimensional data
+    * Downside
+      * less interpretability -> complex in nature
+      * Computationally intensive
+
+- Gradient Boost
+  * It is ensemble learning model. [Level-wise growth]
+  * Unlike RF model, where each tree is trained independently, gradient boosting 
+  focuses on minimizing the overall error by learning from mistakes 
+  in a step-by-step manner.
+    * Start with simple Decision trees
+    * Make the normal predictions and calculate the RESIDUAL(errors)
+    * A new tree is then trained to predict these residuals,
+    focusing on the parts of the data where the previous model performed poorly. 
+    So basically, the new model tries to minimize the error of the prior model 
+    by “boosting” its predictions learned from its prior model
+    * Update the model => new model's prediction + prev model's prediction adopting a learning rate
+    to generalise better
+    * This iterative process is repeated until specified number of trees added
+  * In GB, the features are split heuristically, which makes is inefficient handling 
+  large datasets.
+
+- XGBoost - Extreme gradient boosting
+  * Works under the same principal as gradient boost, adding models sequentially 
+  to correct error. [Depth-wise growth]
+  * optimized and enhanced version of gradient boost
+  * Includes regularization techniques L1(Lasso) and L2(Ridge) to prevent
+  overfitting when hanlding large and complex datasets
+  * Uses "weighted quantile sketch algorithm" to find optimal splits quickly
+  * Supports early stopping mechanism built into the model
+
+- Support vector regressor - Margin-based model
+  * SVR is based on support vector machines (SVM), which aim to find an 
+  optimal hyperplane that best fits the data within a margin(Controlled by the parameter epsilon).
+  It focuses on minimizing error while allowing a certain tolerance around predictions. 
+  * The margin factor is based around the EPSILON parameter. i.e. points within the margin ARE NOT penalized,
+  while the ones outside are considered while minimizing the error.
+  * It handles kernel functions like polynomial or RBF to handle non-linearity
+  * it is computationally expensive when compared with XGBoost
+
+
+
 

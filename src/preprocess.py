@@ -73,8 +73,8 @@ if __name__ == '__main__':
     X_test_scaled = pd.DataFrame(sc.transform(X_test), columns=X_test.columns, index=X_test.index)
 
     # Combine features and target for train and test sets
-    train_df = pd.concat([X_train_scaled, y_train.reset_index(drop=True)], axis=1)
-    test_df = pd.concat([X_test_scaled, y_test.reset_index(drop=True)], axis=1)
+    train_df = pd.concat([X_train_scaled, y_train], axis=1)
+    test_df = pd.concat([X_test_scaled, y_test], axis=1)
 
     # Save the processed dataframe to data/
     save_folder = "/Users/mabin/PycharmProjects/Project/HPP/data"
