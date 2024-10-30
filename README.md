@@ -1,6 +1,19 @@
-# House Price Prediction Preprocessing Script
+# House Price Prediction 
 
-This repository contains a preprocessing script for preparing data for house price prediction. The script handles missing values, encodes categorical features, scales numerical features, and splits the dataset into training and testing sets.
+This is a simple ML project for house price prediction. The project is scoped to take a public available dataset and 
+apply machine learning techniques and predict the sale price of unknown houses 
+
+More than the approach of simply applying machinelearning on random dataset, the whole scope
+of work is 
+
+* Understand and study Ml techniques and concepts as we progress in this project
+* To follow a structural approach in implementing a project
+
+The machine learning models used in this project is:
+* Random Forest
+* XGBoost
+* GradientBoost
+* Support vector regressor
 
 ## Requirements
 
