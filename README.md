@@ -15,9 +15,36 @@ The machine learning models used in this project is:
 * GradientBoost
 * Support vector regressor
 
+### Directory Structure
+
+```plaintext
+HPP/
+├── data/
+│   ├── raw/                # Raw data files
+│   └── processed/          # Processed data files
+├── notebooks/
+│   ├── EDA.ipynb
+│   └── Modeling.ipynb
+├── models/
+│   └── best_model.joblib
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py
+│   ├── train_model.py
+│   └── evaluate_model.py
+├── tests/
+│   └── test_models.py
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── .gitignore
+```
+
 ## Requirements
 
 Make sure to install the necessary dependencies before running the script:
 
 ```bash
 python preprocess.py /Project/HPP/data/train.csv  --test_size 0.3
+```
+
