@@ -79,7 +79,7 @@ Results
     (which can be further explored)
   * XGBoost model performed better when compared with other models
 
-![](https://github.com/Mabinuv/project_hpp/issues/1#issue-2630799888)
+![Evaluation Plot](https://github.com/user-attachments/assets/ac7935e6-bf72-460b-8117-9b2d644862c2)
 
 The XGBoost model shows high performing model for the house price prediction 
 task, Which indicates that it provides the more reliable 
