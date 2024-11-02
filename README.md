@@ -140,3 +140,5 @@ not suitable for this task.
   * It handles kernel functions like polynomial or RBF to handle non-linearity
   * it is computationally expensive when compared with XGBoost
 
+### LICENCE
+[MIT LICENSE](LICENSE)
