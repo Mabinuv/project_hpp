@@ -1,10 +1,13 @@
-# House Price Prediction 
 
-This is a simple ML project for house price prediction. The project is scoped to take a public available dataset and 
+# House Price Prediction 
+####  A simple learning project
+
+### Description
+This is a simple ML project for house price prediction. The project is scoped to take a public available dataset of house prices and 
 apply machine learning techniques and predict the sale price of unknown houses 
 
 More than the approach of simply applying machinelearning on random dataset, the whole scope
-of work is 
+of work is:-
 
 * Understand and study Ml techniques and concepts as we progress in this project
 * To follow a structural approach in implementing a project
@@ -15,9 +18,16 @@ The machine learning models used in this project is:
 * GradientBoost
 * Support vector regressor
 
+### Dataset
+This is public available dataset obtained from [Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)
+
+### Requirements
+```bash
+$ pip install -r requirements.txt
+```
+
+
 ### Directory Structure
-
-
 ```plaintext
 HPP/
 ├── data/
@@ -42,10 +52,40 @@ HPP/
 └── .gitignore
 ```
 
+### Outline
+Set up the python environment and run the requirement.txt to setup necessary
+dependencies
+
+The train.csv and test.csv files are avaliable int he \data folder. These 
+files are sourced from kaggle. Run the preprocess.py file to do necessary 
+data preprocessing
+  * Handling Null values
+  * Handling numerical and categorical values
+  * Scaling and splitting train and test datasets
+  * Function returns saving the processed train_df.csv and 
+  test_df.csv files for evaluation.
 ```bash
 python preprocess.py /Project/HPP/data/train.csv  --test_size 0.3
 ```
+Train the preprocessed datasets on different models. The script should train
+four different model and save the best model based on the root mean squared error(rmse).
 
+
+```bash
+python train.py /Project/HPP/data/train_df.csv  /Project/HPP/data/test_df.csv
+```
+Results
+  * Models trained on different hyperparameters like No_of_estimaters, learning_rate, epsilon
+    (which can be further explored)
+  * XGBoost model performed better when compared with other models
+ 
+The XGBoost model shows high performing model for the house price prediction 
+task, Which indicates that it provides the more reliable 
+predictions when compared to other models. Random forest and gradient boost also 
+performs well and could be considered a strong alternative, 
+but it falls slightly behind 
+XGBoost, while SVR underperforms significantly and is 
+not suitable for this task.
 
 ## Learning concepts
 
@@ -99,5 +139,4 @@ python preprocess.py /Project/HPP/data/train.csv  --test_size 0.3
   * it is computationally expensive when compared with XGBoost
 
 
-
-
+  ![](/Users/mabin/PycharmProjects/Project/HPP/model/Evaluation Plot.png "Evaluation plots of four different models")
