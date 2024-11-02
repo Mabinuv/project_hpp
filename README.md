@@ -41,10 +41,6 @@ HPP/
 └── .gitignore
 ```
 
-## Requirements
-
-Make sure to install the necessary dependencies before running the script:
-
 ```bash
 python preprocess.py /Project/HPP/data/train.csv  --test_size 0.3
 ```
