@@ -78,6 +78,9 @@ Results
   * Models trained on different hyperparameters like No_of_estimaters, learning_rate, epsilon
     (which can be further explored)
   * XGBoost model performed better when compared with other models
+
+![](https://github.com/Mabinuv/project_hpp/issues/1#issue-2630799888)
+
  
 The XGBoost model shows high performing model for the house price prediction 
 task, Which indicates that it provides the more reliable 
@@ -138,5 +141,3 @@ not suitable for this task.
   * It handles kernel functions like polynomial or RBF to handle non-linearity
   * it is computationally expensive when compared with XGBoost
 
-
-  ![](/Users/mabin/PycharmProjects/Project/HPP/model/Evaluation Plot.png "Evaluation plots of four different models")
