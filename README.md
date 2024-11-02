@@ -81,7 +81,6 @@ Results
 
 ![](https://github.com/Mabinuv/project_hpp/issues/1#issue-2630799888)
 
- 
 The XGBoost model shows high performing model for the house price prediction 
 task, Which indicates that it provides the more reliable 
 predictions when compared to other models. Random forest and gradient boost also 
